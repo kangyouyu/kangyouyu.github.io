@@ -5,13 +5,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>vCard - Personal Portfolio</title>
+  <title>Home | Kangyou (Calvin) Yu</title>
 
   <!--
     - favicon
   -->
   <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css"></link>
+  
   <!--
     - custom css link
   -->
@@ -46,9 +47,10 @@
         </figure>
 
         <div class="info-content">
-          <h1 class="name" title="Richard hanrick">Richard hanrick</h1>
+          <h1 class="name" title="Kangyou Yu">Kangyou (Calvin) Yu</h1>
 
-          <p class="title">Web developer</p>
+          <p class="title" style="padding-bottom: 5px;padding-top: 5px;border-top-width: 5px;border-bottom-width: 5px;margin-bottom: 2.5px;margin-top: 2.5px;">CS PhD in UCSB</p>
+          <p class="title" style="padding-bottom: 5px;padding-top: 5px;border-top-width: 5px;border-bottom-width: 5px;margin-bottom: 2.5px;margin-top: 2.5px;">HCI, AR/VR/XR</p>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
@@ -74,10 +76,12 @@
             <div class="contact-info">
               <p class="contact-title">Email</p>
 
-              <a href="mailto:richard@example.com" class="contact-link">richard@example.com</a>
+              <a href="mailto:kangyouyu@ucsb.edu" class="contact-link">kangyouyu [at] ucsb [dot] edu</a>
             </div>
 
           </li>
+		
+	 
 
           <li class="contact-item">
 
@@ -88,24 +92,12 @@
             <div class="contact-info">
               <p class="contact-title">Phone</p>
 
-              <a href="tel:+12133522795" class="contact-link">+1 (213) 352-2795</a>
+              <a href="tel:+18056895662" class="contact-link">+1 (805) 689-5662</a>
             </div>
 
           </li>
 
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Birthday</p>
-
-              <time datetime="1982-06-23">June 23, 1982</time>
-            </div>
-
-          </li>
+          
 
           <li class="contact-item">
 
@@ -116,7 +108,7 @@
             <div class="contact-info">
               <p class="contact-title">Location</p>
 
-              <address>Sacramento, California, USA</address>
+              <address>Santa Barbara, California, US</address>
             </div>
 
           </li>
@@ -128,22 +120,23 @@
         <ul class="social-list">
 
           <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
+            <a href="https://www.linkedin.com/in/kangyou-yu-59b6371a4/" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
             </a>
           </li>
 
           <li class="social-item">
-            <a href="#" class="social-link">
+            <a href="https://twitter.com/yukangyou99" class="social-link">
               <ion-icon name="logo-twitter"></ion-icon>
             </a>
           </li>
-
+          
           <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
+            <a href="https://scholar.google.com/citations?user=x1V3pcUAAAAJ&hl=en" class="social-link">
+              <ion-icon name="logo-google scholar"></ion-icon>
             </a>
           </li>
+
 
         </ul>
 
@@ -170,7 +163,7 @@
         <ul class="navbar-list">
 
           <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
+            <button class="navbar-link  active" data-nav-link>Bio</button>
           </li>
 
           <li class="navbar-item">
@@ -178,7 +171,7 @@
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
+            <button class="navbar-link" data-nav-link target="_blank" href="https://sites.cs.ucsb.edu/~holl/">Portfolio</button>
           </li>
 
           <li class="navbar-item">
@@ -208,18 +201,28 @@
         </header>
 
         <section class="about-text">
+         <p>
+            I'm Kangyou Yu (Calvin), a first-year CS PhD in <a target="_blank" href="http://ilab.cs.ucsb.edu/">FourEyesLab</a> 
+            (directed by <a target="_blank" href="https://sites.cs.ucsb.edu/~holl/">Prof. Tobias Höllerer</a>) 
+            at University of California, Santa Barbara (UCSB). 
+            
+            Prior to joining UCSB, I received my BSc degree in Information and Computing Science from <a target="_blank" href="https://www.xjtlu.edu.cn/en/">Xi’an Jiaotong-Liverpool University</a> (Suzhou, China) 
+            
+            and University of Liverpool (Liverpool, United Kingdom) in 2018 and 
+            
+            was an undergraduate research assistant at X-CHI Lab, supervised by <a target="_blank"  href="https://www.xjtlu.edu.cn/en/departments/academic-departments/school-of-advanced-technology/staff/haining-liang">Prof. Hai-Ning Liang</a> 
+            
+            and <a target="_blank" href="https://xuwenge.github.io/">Dr. Wenge Xu</a> (now are a Lecturer at Birmingham City University).
+          </p>
+          
           <p>
-            I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media.
-            I enjoy
-            turning complex problems into simple, beautiful and intuitive designs.
+            I also worked as a remote research intern in the VVISE Lab, supervised by Prof. Wolfgang Stuerzlinger (Simon Fraser University, Canada) and Prof. Anil Ufuk Batmaz (now at Kadir Has University, Turkey). 
           </p>
 
           <p>
-            My job is to build your website so that it is functional and user-friendly but at the same time attractive.
-            Moreover, I
-            add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring
-            across your
-            message and identity in the most creative way. I created web design for many famous brand companies.
+           My research interest lies on Human-Computer Interaction (HCI) and focus on understanding human daily behaviors, involving full body into interaction process, and providing more feedback (Haptics, Auditory...) to design more natural interactive methods/techniques in AR/VR. 
+            
+           I am also interested in games technologies, visualization and exergames.
           </p>
         </section>
 

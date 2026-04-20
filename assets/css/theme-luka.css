@@ -525,3 +525,18 @@ body.theme-luka strong {
     font-size: 13px;
   }
 }
+
+/* 1. This ONLY targets the links (PDF, Bibtex text) */
+.links a {
+  font-size: 1.1rem !important;   /* Makes the text "PDF/Bibtex" bigger */
+  font-weight: 700 !important;   /* Makes the text bold like <strong> */
+  text-decoration: none;         /* Removes underlines */
+  display: inline-flex;
+  align-items: center;
+}
+
+/* 2. This ONLY targets the icons inside those links */
+.links a i {
+  font-size: 1.3rem !important;   /* Scales the icon even larger than the text */
+  margin-right: 5px;              /* Puts space between icon and text */
+}

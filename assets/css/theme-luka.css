@@ -540,3 +540,23 @@ body.theme-luka strong {
   font-size: 1.1rem !important;   /* Reduced from 1.3rem */
   margin-right: 5px;              
 }
+
+/* This matches the color and width of your publication side-lines */
+.service-list-styled {
+  list-style-type: none;
+  padding-left: 15px;
+  margin-left: 5px;
+  /* Match the reddish-brown accent color of the Luka theme */
+  border-left: 2px solid #b85c48; 
+}
+
+.service-list-styled li {
+  margin-bottom: 5px;
+  font-size: 0.95rem;
+}
+
+.service-heading {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #333;
+}

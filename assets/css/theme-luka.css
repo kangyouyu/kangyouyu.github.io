@@ -526,17 +526,17 @@ body.theme-luka strong {
   }
 }
 
-/* 1. This ONLY targets the links (PDF, Bibtex text) */
+/* 1. Adjusted link text (PDF, Bibtex) */
 .links a {
-  font-size: 0.95rem !important;   /* Makes the text "PDF/Bibtex" bigger */
-  font-weight: 600 !important;   /* Makes the text bold like <strong> */
-  text-decoration: none;         /* Removes underlines */
+  font-size: 0.95rem !important;  /* Reduced from 1.1rem */
+  font-weight: 600 !important;    /* "Semi-bold" instead of "Heavy" */
+  text-decoration: none;
   display: inline-flex;
   align-items: center;
 }
 
-/* 2. This ONLY targets the icons inside those links */
+/* 2. Adjusted icons */
 .links a i {
-  font-size: 1.1rem !important;   /* Scales the icon even larger than the text */
-  margin-right: 5px;              /* Puts space between icon and text */
+  font-size: 1.1rem !important;   /* Reduced from 1.3rem */
+  margin-right: 5px;              
 }

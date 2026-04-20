@@ -562,24 +562,4 @@ body.theme-luka strong {
 }
 
 
-/* Container for the logo */
-.edu-logo-box {
-  width: 60px;               /* Force consistent width */
-  height: 60px;              /* Force consistent height (square) */
-  background-color: white;   /* Gives the dark logos a clean background */
-  border: 1px solid #eee;    /* Subtle border for separation */
-  border-radius: 8px;        /* Optional: rounded corners for a modern look */
-  display: flex;
-  justify-content: center;   /* Center horizontally */
-  align-items: center;       /* Center vertically */
-  overflow: hidden;          /* Prevents logos from 'spilling' out */
-  padding: 5px;              /* Breathing room inside the box */
-  margin-right: 15px;        /* Gap between logo and the text */
-}
 
-/* The actual image inside the box */
-.edu-logo-box img {
-  max-width: 90%;            /* Scaled down to fit the box */
-  max-height: 90%;           /* Scaled down to fit the box */
-  object-fit: contain;       /* Essential: maintains original shape, no distortion */
-}

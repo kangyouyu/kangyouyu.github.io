@@ -620,8 +620,8 @@ body.theme-luka .nav-menu {
 
 body.theme-luka .nav-menu a {
   color: var(--luka-text) !important; /* 覆盖默认的链接颜色 */
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 15px;
+  font-weight: 600;
   transition: color 0.2s ease;
 }
 

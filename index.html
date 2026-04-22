@@ -696,3 +696,29 @@
   </script>
 </body>
 </html>
+
+
+<script>
+  // 获取按钮和菜单元素
+  const menuToggle = document.getElementById('menuToggle');
+  const navMenu = document.getElementById('navMenu');
+
+  // 点击按钮切换菜单显示/隐藏
+  menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    // 可选：切换图标，点开变 X，收起变三道杠
+    const icon = menuToggle.querySelector('i');
+    icon.classList.toggle('fa-bars');
+    icon.classList.toggle('fa-xmark');
+  });
+
+  // 点击菜单里的链接后，自动关闭菜单（方便跳转）
+  navMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('active');
+      const icon = menuToggle.querySelector('i');
+      icon.classList.add('fa-bars');
+      icon.classList.remove('fa-xmark');
+    });
+  });
+</script>

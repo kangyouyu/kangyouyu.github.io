@@ -581,5 +581,32 @@ body.theme-luka strong {
   color: #333;
 }
 
+/* 设置滚动容器 */
+body.theme-luka .news-scroll-container {
+  max-height: 120px;    /* 你可以根据需要调整这个高度 */
+  overflow-y: auto;     /* 纵向溢出时自动显示滚动条 */
+  padding-right: 8px;   /* 为右侧滚动条留出间距 */
+}
+
+/* 美化滚动条 (针对 Chrome, Safari, Edge) */
+body.theme-luka .news-scroll-container::-webkit-scrollbar {
+  width: 4px;           /* 极细滚动条，更美观 */
+}
+
+body.theme-luka .news-scroll-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body.theme-luka .news-scroll-container::-webkit-scrollbar-thumb {
+  background-color: var(--luka-accent); /* 使用你主题的红色调作为滚动条颜色 */
+  border-radius: 10px;
+  opacity: 0.5;
+}
+
+/* 鼠标悬停在滚动条上时加深颜色 */
+body.theme-luka .news-scroll-container::-webkit-scrollbar-thumb:hover {
+  background-color: var(--luka-text);
+}
+
 
 

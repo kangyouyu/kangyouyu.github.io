@@ -256,6 +256,7 @@ body.theme-luka .section {
   opacity: 0;
   transform: translateY(12px);
   transition: opacity 0.45s ease, transform 0.45s ease;
+  scroll-margin-top: 80px;
 }
 
 body.theme-luka .section.visible {

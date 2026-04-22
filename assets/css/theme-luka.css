@@ -610,9 +610,7 @@ body.theme-luka .news-scroll-container::-webkit-scrollbar-thumb:hover {
 }
 
 
-/* --- 新增：导航菜单样式 --- */
 
-/* 电脑端布局 */
 body.theme-luka .nav-menu {
   display: flex;
   gap: 25px; /* 链接之间的间距 */
@@ -620,29 +618,77 @@ body.theme-luka .nav-menu {
 }
 
 body.theme-luka .nav-menu a {
-  color: var(--luka-text) !important; /* 覆盖默认的链接颜色 */
+  color: var(--luka-text) !important; 
   font-size: 15px;
   font-weight: 600;
   transition: color 0.2s ease;
 }
 
-/* 鼠标悬停效果：变为主题暖红色 */
+
 body.theme-luka .nav-menu a:hover {
   color: var(--luka-accent) !important;
-  filter: none; /* 移除默认的亮度滤镜，直接变色更简洁 */
+  filter: none; /* 
 }
 
-/* 响应式适配：手机屏幕隐藏菜单，防止堆叠 */
-@media (max-width: 820px) {
-  body.theme-luka .nav-menu {
-    display: none;
-  }
-}
 
-/* 确保顶部的名字和按钮不会被挤压 */
+
+
 body.theme-luka .nav-left, 
 body.theme-luka .nav-right {
   flex-shrink: 0;
+}
+
+
+
+
+/* --- 移动端菜单按钮样式 --- */
+body.theme-luka .menu-toggle {
+  display: none; /* 默认隐藏 */
+  border: none;
+  background: transparent;
+  color: var(--luka-text);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+/* --- 移动端适配逻辑 (核心) --- */
+@media (max-width: 820px) {
+  /* 显示按钮 */
+  body.theme-luka .menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* 纵向排列菜单 */
+  body.theme-luka .nav-menu {
+    display: none; /* 默认隐藏 */
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* 导航栏高度 */
+    left: 0;
+    right: 0;
+    background: var(--luka-bg);
+    border-bottom: 1px solid var(--luka-footer-border);
+    padding: 20px;
+    gap: 15px;
+    box-shadow: 0 10px 15px var(--luka-shadow);
+  }
+
+  /* 当菜单被激活时的状态 */
+  body.theme-luka .nav-menu.active {
+    display: flex; 
+  }
+
+  body.theme-luka .nav-menu a {
+    font-size: 16px;
+    padding: 10px 0;
+    border-bottom: 1px dashed var(--luka-border);
+  }
 }
 
 

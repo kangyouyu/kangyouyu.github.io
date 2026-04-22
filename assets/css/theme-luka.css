@@ -521,28 +521,45 @@ body.theme-luka .menu-toggle {
     flex-direction: column;
     position: absolute;
     
-    /* 控制面板尺寸与位置：更窄、更精简 */
-    top: 60px;               
-    right: 15px;             /* 靠右对齐 */
+    /* 1. 整体面板更窄、更靠边 */
+    top: 55px;               /* 距离导航栏更近一点 */
+    right: 10px;             /* 减少与屏幕右侧的间距 */
     left: auto;              
-    width: 150px;            /* 进一步缩小宽度（从200px减小到150px） */
+    width: 130px;            /* 宽度从 150px 进一步缩小到 130px */
     
     background: var(--luka-bg);
-    padding: 8px 15px;       /* 减小上下内边距 */
+    padding: 4px 0;          /* 极小的上下内边距 */
     border: 1px solid var(--luka-border); 
-    border-radius: 10px;     
-    box-shadow: 0 8px 20px var(--luka-shadow);
+    border-radius: 8px;      /* 稍微调小圆角以匹配更小的面板 */
+    box-shadow: 0 4px 12px var(--luka-shadow);
     z-index: 1000;
   }
 
-  /* 列表项微调 */
   body.theme-luka .nav-menu a {
-    padding: 8px 0;          /* 减小选项之间的间距 */
-    font-size: 12.5px;       /* 调小字体（从14px减小到12.5px） */
-    font-weight: 500;
-    border-bottom: 1px dashed var(--luka-border);
-    text-align: left;
+    display: flex !important;
+    align-items: center;      
+    justify-content: center;  
+    
+    /* 2. 压缩高度并加粗字体 */
+    height: 34px;             /* 高度从 44px 大幅减少到 34px，减少空白 */
+    font-size: 12px;          /* 稍微调小字号 */
+    font-weight: 700;         /* 字体加粗 */
+    
+    width: 100%;
+    margin: 0;
     color: var(--luka-text) !important;
+    position: relative;       
+  }
+
+  /* 3. 减少分割线的左右留白 */
+  body.theme-luka .nav-menu a:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 10px;               /* 线条两端留白更少 */
+    right: 10px;
+    height: 1px;
+    border-bottom: 1px dashed var(--luka-border);
   }
   
 

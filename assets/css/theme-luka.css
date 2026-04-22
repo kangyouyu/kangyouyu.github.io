@@ -458,6 +458,18 @@ body.theme-luka strong {
   color: var(--luka-text);
 }
 
+  body.theme-luka .nav-menu {
+    display: flex !important; 
+  gap: 20px;
+  
+  }
+
+
+
+body.theme-luka .menu-toggle {
+  display: none !important; 
+}
+
 @media (max-width: 1080px) {
   body.theme-luka .nav-container {
     padding: 0 20px;
@@ -664,25 +676,11 @@ body.theme-luka .nav-menu a:hover {
 
 
 
-body.theme-luka .nav-left, 
-body.theme-luka .nav-right {
-  flex-shrink: 0;
-}
 
 
 
 
-/* --- 移动端菜单按钮样式 --- */
-body.theme-luka .menu-toggle {
-  display: none !important; /* 电脑端彻底隐藏三道杠 */
-}
 
-/* 纵向排列菜单 */
-  body.theme-luka .nav-menu {
-    display: flex !important; /* 电脑端横向显示菜单 */
-  gap: 20px;
-  
-  }
 
 
 

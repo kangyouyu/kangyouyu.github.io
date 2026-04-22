@@ -480,6 +480,12 @@ body.theme-luka strong {
     padding: 0;
   }
 
+
+  body.theme-luka .visitor-card {
+    width: 100%;       
+    max-width: 500px;  
+  }
+
   body.theme-luka .content {
     margin-left: 0;
     padding: 32px 0 48px;
@@ -515,10 +521,12 @@ body.theme-luka strong {
   }
 
   body.theme-luka .visitor-card {
-    width: 100%;
-    max-width: 280px;
+    width: 90%;
+    max-width: 500px;
   }
 }
+
+
 
 @media (max-width: 480px) {
   body.theme-luka .section {

@@ -283,6 +283,16 @@ body.theme-luka .card {
   box-shadow: none;
 }
 
+
+body.theme-luka #education .card {
+  margin-bottom: 36px; 
+}
+
+
+body.theme-luka #education .card:last-child {
+  margin-bottom: 0; 
+}
+
 body.theme-luka .timeline-item {
   position: relative;
   margin-left: 20px;
@@ -318,14 +328,16 @@ body.theme-luka .timeline-item::after {
 
 body.theme-luka .experience-item {
   display: flex;
-  align-items: flex-start;
-  gap: 16px;
+  align-items: center;
+  gap: 24px;
 }
 
 body.theme-luka .institution-logo {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   flex-shrink: 0;
+   object-fit: contain;
+
 }
 
 body.theme-luka .experience-content {
@@ -498,8 +510,8 @@ body.theme-luka strong {
   }
 
   body.theme-luka .institution-logo {
-    width: 44px;
-    height: 44px;
+    width: 64px;
+    height: 64px;
   }
 
   body.theme-luka .visitor-card {

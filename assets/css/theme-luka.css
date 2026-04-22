@@ -516,7 +516,7 @@ body.theme-luka .menu-toggle {
 
 /* 确保电脑端菜单正常，按钮隐藏 */
 body.theme-luka .menu-toggle { display: none !important; }
-body.theme-luka .nav-menu { display: flex !important; gap: 20px; align-items: center; }
+body.theme-luka .nav-menu { display: flex !important; gap: 5px; align-items: center; }
 
 @media (max-width: 820px) {
   /* 1. 强制隐藏横向菜单并转为垂直小面板 */

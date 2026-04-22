@@ -491,7 +491,7 @@ body.theme-luka strong {
 
   body.theme-luka .site-footer p {
     padding-top: 0;
-    border-top: 2px solid var(--luka-footer-border);
+    border-top: 1px solid var(--luka-footer-border);
   }
 }
 

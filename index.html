@@ -714,4 +714,19 @@
       navMenu.classList.remove('active');
     });
   });
+
+
+  document.addEventListener('click', function(event) {
+    const navMenu = document.querySelector('.nav-menu');
+    const menuToggle = document.querySelector('.menu-toggle');
+
+    // 检查点击的目标是否既不是菜单，也不是那个开关按钮
+    const isClickInsideMenu = navMenu.contains(event.target);
+    const isClickInsideToggle = menuToggle.contains(event.target);
+
+    // 如果菜单当前是打开状态，且点击了外部区域
+    if (navMenu.classList.contains('active') && !isClickInsideMenu && !isClickInsideToggle) {
+        navMenu.classList.remove('active');
+    }
+});
 </script>

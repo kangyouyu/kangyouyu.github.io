@@ -1367,3 +1367,32 @@ body.theme-luka .news-scroll-container::-webkit-scrollbar-thumb:hover {
   background-color: var(--luka-text);
 
 }
+
+
+/* --- 1. 彻底移除移动端点击时的蓝色阴影/高亮 (系统自带的) --- */
+body.theme-luka .menu-toggle,
+body.theme-luka .theme-toggle,
+body.theme-luka .nav-menu a {
+  -webkit-tap-highlight-color: transparent !important;
+  outline: none !important;
+}
+
+/* --- 2. 只有在电脑端（支持悬停的设备）才显示橘色高亮 --- */
+@media (hover: hover) {
+  body.theme-luka .menu-toggle:hover,
+  body.theme-luka .theme-toggle:hover,
+  body.theme-luka .nav-menu a:hover {
+    color: var(--luka-accent) !important;
+    background: rgba(194, 113, 79, 0.05) !important;
+  }
+}
+
+/* --- 3. 在移动端，仅在按下的那一瞬间有反馈，松开即消失 --- */
+@media (hover: none) {
+  body.theme-luka .menu-toggle:active,
+  body.theme-luka .theme-toggle:active,
+  body.theme-luka .nav-menu a:active {
+    color: var(--luka-accent) !important;
+    background: rgba(194, 113, 79, 0.1) !important; /* 按下时的瞬时反馈 */
+  }
+}

@@ -502,6 +502,37 @@ body.theme-luka strong {
   }
 }
 
+/* --- 移动端适配逻辑 (核心) --- */
+@media (max-width: 820px) {
+  /* 隐藏横向菜单，防止挤压 */
+  body.theme-luka .nav-menu {
+    display: none !important; /* 默认不显示，直到点击三道杠 */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: var(--luka-bg);
+    padding: 20px;
+    border-bottom: 1px solid var(--luka-border);
+  }
+
+  /* 当点击三道杠后，添加 active 类才显示菜单 */
+  body.theme-luka .nav-menu.active {
+    display: flex !important; 
+  }
+
+  /* 显示三道杠按钮 */
+  body.theme-luka .menu-toggle {
+    display: inline-flex !important; 
+    background: none;
+    border: none;
+    color: var(--luka-text);
+    font-size: 20px;
+    cursor: pointer;
+  }
+}
+
 @media (max-width: 640px) {
   body.theme-luka .image.avatar img {
     width: 148px;
@@ -650,38 +681,9 @@ body.theme-luka .menu-toggle {
   body.theme-luka .nav-menu {
     display: flex !important; /* 电脑端横向显示菜单 */
   gap: 20px;
+  
   }
 
-/* --- 移动端适配逻辑 (核心) --- */
-@media (max-width: 820px) {
-  /* 隐藏横向菜单，防止挤压 */
-  body.theme-luka .nav-menu {
-    display: none !important; /* 默认不显示，直到点击三道杠 */
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    background: var(--luka-bg);
-    padding: 20px;
-    border-bottom: 1px solid var(--luka-border);
-  }
-
-  /* 当点击三道杠后，添加 active 类才显示菜单 */
-  body.theme-luka .nav-menu.active {
-    display: flex !important; 
-  }
-
-  /* 显示三道杠按钮 */
-  body.theme-luka .menu-toggle {
-    display: inline-flex !important; 
-    background: none;
-    border: none;
-    color: var(--luka-text);
-    font-size: 20px;
-    cursor: pointer;
-  }
-}
 
 
 

@@ -643,51 +643,43 @@ body.theme-luka .nav-right {
 
 /* --- 移动端菜单按钮样式 --- */
 body.theme-luka .menu-toggle {
-  display: none; /* 默认隐藏 */
-  border: none;
-  background: transparent;
-  color: var(--luka-text);
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 18px;
-  margin-right: 5px;
+  display: none; /* 电脑端彻底隐藏三道杠 */
 }
+
+/* 纵向排列菜单 */
+  body.theme-luka .nav-menu {
+    display: flex; /* 电脑端横向显示菜单 */
+  gap: 20px;
+  }
 
 /* --- 移动端适配逻辑 (核心) --- */
 @media (max-width: 820px) {
-  /* 显示按钮 */
-  body.theme-luka .menu-toggle {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  /* 纵向排列菜单 */
+  /* 隐藏横向菜单，防止挤压 */
   body.theme-luka .nav-menu {
-    display: none; /* 默认隐藏 */
+    display: none; /* 关键：默认隐藏 */
     flex-direction: column;
     position: absolute;
-    top: 60px; /* 导航栏高度 */
+    top: 60px;
     left: 0;
     right: 0;
     background: var(--luka-bg);
-    border-bottom: 1px solid var(--luka-footer-border);
     padding: 20px;
-    gap: 15px;
-    box-shadow: 0 10px 15px var(--luka-shadow);
+    border-bottom: 1px solid var(--luka-border);
   }
 
-  /* 当菜单被激活时的状态 */
+  /* 当点击三道杠后，添加 active 类才显示菜单 */
   body.theme-luka .nav-menu.active {
     display: flex; 
   }
 
-  body.theme-luka .nav-menu a {
-    font-size: 16px;
-    padding: 10px 0;
-    border-bottom: 1px dashed var(--luka-border);
+  /* 显示三道杠按钮 */
+  body.theme-luka .menu-toggle {
+    display: inline-flex;
+    background: none;
+    border: none;
+    color: var(--luka-text);
+    font-size: 20px;
+    cursor: pointer;
   }
 }
 

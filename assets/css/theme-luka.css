@@ -544,7 +544,19 @@ body.theme-luka .menu-toggle {
   /* 当点击三道杠后，添加 active 类才显示菜单 */
   body.theme-luka .nav-menu.active {
     display: flex !important; 
+     animation: fadeInDown 0.2s ease-out;
   }
+
+   @keyframes fadeInDown {
+    from {
+        opacity: 0;            /* 初始透明度为 0 */
+        transform: translateY(-10px); /* 初始位置向上偏 10 像素 */
+    }
+    to {
+        opacity: 1;            /* 结束透明度为 1 */
+        transform: translateY(0);    /* 回到原位 */
+    }
+}
 
   body.theme-luka .nav-menu a:last-child {
     border-bottom: none;
@@ -693,6 +705,9 @@ body.theme-luka .nav-menu a:hover {
   color: var(--luka-accent) !important;
   filter: none; /* 
 }
+
+
+
 
 
 

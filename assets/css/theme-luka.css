@@ -514,70 +514,78 @@ body.theme-luka .menu-toggle {
   }
 }
 
-/* --- 移动端适配逻辑 (核心) --- */
+/* 确保电脑端菜单正常，按钮隐藏 */
+body.theme-luka .menu-toggle { display: none !important; }
+body.theme-luka .nav-menu { display: flex !important; gap: 20px; align-items: center; }
+
 @media (max-width: 820px) {
+  /* 1. 强制隐藏横向菜单并转为垂直小面板 */
   body.theme-luka .nav-menu {
     display: none !important;
-    flex-direction: column;
-    position: absolute;
-    
-    /* 1. 整体面板更窄、更靠边 */
-    top: 55px;               /* 距离导航栏更近一点 */
-    right: 10px;             /* 减少与屏幕右侧的间距 */
-    left: auto;              
-    width: 130px;            /* 宽度从 150px 进一步缩小到 130px */
-    
-    background: var(--luka-bg);
-    padding: 4px 0;          /* 极小的上下内边距 */
-    border: 1px solid var(--luka-border); 
-    border-radius: 8px;      /* 稍微调小圆角以匹配更小的面板 */
-    box-shadow: 0 4px 12px var(--luka-shadow);
-    z-index: 1000;
+    flex-direction: column !important;
+    position: absolute !important;
+    top: 55px !important;
+    right: 10px !important;
+    left: auto !important;
+    width: 120px !important;    /* 极简宽度 */
+    background: var(--luka-bg) !important;
+    padding: 2px 0 !important;
+    border: 1px solid var(--luka-border) !important;
+    border-radius: 6px !important;
+    box-shadow: 0 4px 12px var(--luka-shadow) !important;
+    z-index: 2000 !important;
   }
 
+  /* 2. 只有在 active 时才显示 */
+  body.theme-luka .nav-menu.active {
+    display: flex !important;
+    animation: fadeInDown 0.2s ease-out;
+  }
+
+  /* 3. 极简字体与高度 */
   body.theme-luka .nav-menu a {
     display: flex !important;
-    align-items: center;      
-    justify-content: center;  
-    
-    /* 2. 压缩高度并加粗字体 */
-    height: 34px;             /* 高度从 44px 大幅减少到 34px，减少空白 */
-    font-size: 12px;          /* 稍微调小字号 */
-    font-weight: 700;         /* 字体加粗 */
-    
-    width: 100%;
-    margin: 0;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 32px !important;    /* 非常紧凑的高度 */
+    font-size: 11px !important;  /* 小而精致的字体 */
+    font-weight: 800 !important; /* 加粗 */
+    width: 100% !important;
+    margin: 0 !important;
     color: var(--luka-text) !important;
-    position: relative;       
+    border: none !important;
+    position: relative !important;
   }
 
-  /* 3. 减少分割线的左右留白 */
+  /* 4. 虚线分割线 */
   body.theme-luka .nav-menu a:not(:last-child)::after {
     content: "";
     position: absolute;
     bottom: 0;
-    left: 10px;               /* 线条两端留白更少 */
+    left: 10px;
     right: 10px;
     height: 1px;
     border-bottom: 1px dashed var(--luka-border);
   }
-  
 
-  /* 当点击三道杠后，添加 active 类才显示菜单 */
-  body.theme-luka .nav-menu.active {
-    display: flex !important; 
-     animation: fadeInDown 0.2s ease-out;
+  /* 5. 手机端显示按钮 */
+  body.theme-luka .menu-toggle {
+    display: inline-flex !important;
+    background: none !important;
+    border: none !important;
+    color: var(--luka-text) !important;
+    font-size: 20px !important;
+    cursor: pointer !important;
   }
 
-   @keyframes fadeInDown {
-    from {
-        opacity: 0;            /* 初始透明度为 0 */
-        transform: translateY(-10px); /* 初始位置向上偏 10 像素 */
-    }
-    to {
-        opacity: 1;            /* 结束透明度为 1 */
-        transform: translateY(0);    /* 回到原位 */
-    }
+  body.theme-luka .menu-toggle:hover {
+    color: var(--luka-accent) !important;
+  }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
   body.theme-luka .nav-menu a:last-child {
@@ -709,24 +717,6 @@ body.theme-luka .news-scroll-container::-webkit-scrollbar-thumb:hover {
 
 
 
-body.theme-luka .nav-menu {
-  display: flex;
-  gap: 25px; /* 链接之间的间距 */
-  align-items: center;
-}
-
-body.theme-luka .nav-menu a {
-  color: var(--luka-text) !important; 
-  font-size: 15px;
-  font-weight: 600;
-  transition: color 0.2s ease;
-}
-
-
-body.theme-luka .nav-menu a:hover {
-  color: var(--luka-accent) !important;
-  filter: none; /* 
-}
 
 
 

@@ -317,7 +317,7 @@ body.theme-luka .timeline-item:last-child::before {
 body.theme-luka .timeline-item::after {
   content: "";
   position: absolute;
-  left: -25px;
+  left: -24px;
   top: 45px;
   width: 10px;
   height: 10px;

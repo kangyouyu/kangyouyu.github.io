@@ -521,17 +521,33 @@ body.theme-luka .menu-toggle {
     display: none !important; /* 默认不显示，直到点击三道杠 */
     flex-direction: column;
     position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
+    top: 65px;
+    right:20px;
+    left: auto;
+    width: 200px;
     background: var(--luka-bg);
-    padding: 20px;
+    padding: 10px 20px;
     border-bottom: 1px solid var(--luka-border);
+    border-radius: 12px;     /* 圆角让它看起来更现代 */
+    box-shadow: 0 10px 25px var(--luka-shadow);
+    z-index: 999;
+  }
+
+    /* 列表项的微调 */
+  body.theme-luka .nav-menu a {
+    padding: 10px 0;
+    font-size: 14px;         /* 稍微缩小字体 */
+    border-bottom: 1px dashed var(--luka-border);
+    text-align: left;
   }
 
   /* 当点击三道杠后，添加 active 类才显示菜单 */
   body.theme-luka .nav-menu.active {
     display: flex !important; 
+  }
+
+  body.theme-luka .nav-menu a:last-child {
+    border-bottom: none;
   }
 
   /* 显示三道杠按钮 */
@@ -543,6 +559,11 @@ body.theme-luka .menu-toggle {
     font-size: 20px;
     cursor: pointer;
   }
+
+   body.theme-luka .menu-toggle:hover {
+    color: var(--luka-accent) !important; /* 悬停时变为你网页常用的主题色 */
+  }
+   
 }
 
 @media (max-width: 640px) {

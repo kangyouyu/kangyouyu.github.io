@@ -1041,6 +1041,20 @@ body.theme-luka .nav-right {
   gap: 10px;
 }
 
+body.theme-luka .nav-menu a {
+    /* 强制使用正常页面字体颜色，覆盖默认的链接橘红色 */
+    color: var(--luka-text) !important; 
+    font-size: 15px;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+body.theme-luka .nav-menu a:hover {
+    /* 悬停时变为橘红色 */
+    color: var(--luka-accent) !important;
+    filter: none;
+}
+
 /* 2. 移动端逻辑 (屏幕宽度 <= 820px) */
 @media (max-width: 820px) {
   
@@ -1048,10 +1062,11 @@ body.theme-luka .nav-right {
   body.theme-luka .nav-menu {
     display: none !important;
     flex-direction: column !important;
+    gap:5px !important;
     position: absolute !important;
     top: 55px !important;
     right: 10px !important;
-    width: 120px !important; 
+    width: 120px !important;
     background: var(--luka-bg) !important;
     padding: 0 !important;
     border: 1px solid var(--luka-border) !important;
@@ -1066,22 +1081,31 @@ body.theme-luka .nav-right {
     display: flex !important;
     animation: fadeInDown 0.2s ease-out;
   }
+  
+    
 
   /* 菜单选项：高度绝对对齐 + 字体加粗 */
   body.theme-luka .nav-menu a {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    height: 36px !important;     /* 统一所有选项高度 */
+    height: 35px !important;     /* 统一所有选项高度 */
+    
     width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
     font-size: 11px !important;
     font-weight: 800 !important;
     color: var(--luka-text) !important;
+    
     border-bottom: 1px dashed var(--luka-border) !important;
+    background: transparent !important; 
   }
-
+    
+  body.theme-luka .nav-menu a:hover {
+        color: var(--luka-accent) !important; /* 悬停时变为橘红色 */
+        background: rgba(194, 113, 79, 0.05) !important; /* 增加一个极浅的背景反馈 */
+    }
   body.theme-luka .nav-menu a:last-child {
     border-bottom: none !important; /* 最后一个选项去掉虚线，高度依然是36px */
   }
@@ -1128,6 +1152,11 @@ body.theme-luka .nav-right {
 
 
 @media (max-width: 640px) {
+
+  body.theme-luka .social-icons a {
+    width: 40px !important;
+    height: 40px !important;
+  }
 
   body.theme-luka .image.avatar img {
 

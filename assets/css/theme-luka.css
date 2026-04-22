@@ -581,16 +581,16 @@ body.theme-luka strong {
   color: #333;
 }
 
-/* 设置滚动容器 */
+
 body.theme-luka .news-scroll-container {
-  max-height: 120px;    /* 你可以根据需要调整这个高度 */
-  overflow-y: auto;     /* 纵向溢出时自动显示滚动条 */
-  padding-right: 8px;   /* 为右侧滚动条留出间距 */
+  max-height: 120px;   
+  overflow-y: auto;     
+  padding-right: 8px;   
 }
 
-/* 美化滚动条 (针对 Chrome, Safari, Edge) */
+
 body.theme-luka .news-scroll-container::-webkit-scrollbar {
-  width: 4px;           /* 极细滚动条，更美观 */
+  width: 4px;           
 }
 
 body.theme-luka .news-scroll-container::-webkit-scrollbar-track {
@@ -598,14 +598,50 @@ body.theme-luka .news-scroll-container::-webkit-scrollbar-track {
 }
 
 body.theme-luka .news-scroll-container::-webkit-scrollbar-thumb {
-  background-color: var(--luka-accent); /* 使用你主题的红色调作为滚动条颜色 */
+  background-color: var(--luka-accent); 
   border-radius: 10px;
   opacity: 0.5;
 }
 
-/* 鼠标悬停在滚动条上时加深颜色 */
+
 body.theme-luka .news-scroll-container::-webkit-scrollbar-thumb:hover {
   background-color: var(--luka-text);
+}
+
+
+/* --- 新增：导航菜单样式 --- */
+
+/* 电脑端布局 */
+body.theme-luka .nav-menu {
+  display: flex;
+  gap: 25px; /* 链接之间的间距 */
+  align-items: center;
+}
+
+body.theme-luka .nav-menu a {
+  color: var(--luka-text) !important; /* 覆盖默认的链接颜色 */
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+/* 鼠标悬停效果：变为主题暖红色 */
+body.theme-luka .nav-menu a:hover {
+  color: var(--luka-accent) !important;
+  filter: none; /* 移除默认的亮度滤镜，直接变色更简洁 */
+}
+
+/* 响应式适配：手机屏幕隐藏菜单，防止堆叠 */
+@media (max-width: 820px) {
+  body.theme-luka .nav-menu {
+    display: none;
+  }
+}
+
+/* 确保顶部的名字和按钮不会被挤压 */
+body.theme-luka .nav-left, 
+body.theme-luka .nav-right {
+  flex-shrink: 0;
 }
 
 

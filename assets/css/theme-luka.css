@@ -1369,7 +1369,7 @@ body.theme-luka .news-scroll-container::-webkit-scrollbar-thumb:hover {
 }
 
 
-/* --- 1. 彻底移除移动端点击时的蓝色阴影/高亮 (系统自带的) --- */
+/* /* --- 1. 彻底移除移动端点击时的蓝色阴影/高亮 (系统自带的) --- */
 body.theme-luka .menu-toggle,
 body.theme-luka .theme-toggle,
 body.theme-luka .nav-menu a {
@@ -1395,4 +1395,4 @@ body.theme-luka .nav-menu a {
     color: var(--luka-accent) !important;
     background: rgba(194, 113, 79, 0.1) !important; /* 按下时的瞬时反馈 */
   }
-}
+} */
